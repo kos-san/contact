@@ -17,7 +17,7 @@
         <th scope="row"> <%= comment.id %> </th>
         <td> <%= l comment.created_at %> </td>
         <td> <%= comment.name %> </td>
-        <td> <%= comment.email %> </td>
+        <td> <a href="mailto:<%= comment.email%>"><%= comment.email %></a> </td>
         <td> <%= comment.title %> </td>
         <td> <%= comment.content %> </td>
       </tr>

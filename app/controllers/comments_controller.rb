@@ -7,7 +7,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    Comment.create(comment_params)
+    @comment = Comment.new(comment_params)
+    if @comment.valid?
+      @comment.save
+      redirect_to 'new_comment_path'
+    else
+      render 'new'
+    end
+    
   end
 
   private
