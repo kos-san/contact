@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th scope="col">No.</th>
+      <th scope="col">日時</th>
       <th scope="col">名前</th>
       <th scope="col">メールアドレス</th>
       <th scope="col">件名</th>
@@ -14,6 +15,7 @@
     <% @comments.each do |comment| %>
       <tr>
         <th scope="row"> <%= comment.id %> </th>
+        <td> <%= l comment.created_at %> </td>
         <td> <%= comment.name %> </td>
         <td> <%= comment.email %> </td>
         <td> <%= comment.title %> </td>
