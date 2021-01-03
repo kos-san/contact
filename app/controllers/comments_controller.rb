@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.valid?
       @comment.save
-      redirect_to 'new_comment_path'
+      @this_comment = comment_params
     else
       render 'new'
     end
